@@ -1,18 +1,42 @@
+def yes_no(question):
+    # loop for testing
+    # checks for yous or no
+    # repets if user doesn't enter a valid response
+    while True:
+        response = input(question).lower()
+
+        if response == "yes" or response == "y":
+            return "yes"
+
+        elif response == "no" or response == "n":
+            return "no"
+
+        else:
+            print("you did not insert a valid response")
+
+
+def instructions():
+    print('''
+           ** instructions **
+    
+              do something
+            do something else
+                  ect
+    
+                 done :)
+    ''')
+
+
+# main routine
+print()
 print("🎲🎲 Roll it 13 🎲🎲")
+print()
 
 # loop for testing purposes
 
-while True:
-    want_instructions = input("do you want to read the instructions ").lower()
-    print(want_instructions)
-    print(f"you answered {want_instructions} to the question")
+want_instructions = yes_no("do you want to read the instructions ")
 
-    # checks for yes or no
-    if want_instructions == "yes" or want_instructions == "y":
-        print("you chose yes")
+if want_instructions == "yes":
+    instructions()
 
-    elif want_instructions == "no" or want_instructions == "n":
-        print("you chose no")
-
-    else:
-        print("you did not insert a valid response")
+print("program con tunes")

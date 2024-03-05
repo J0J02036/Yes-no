@@ -1,5 +1,5 @@
 def yes_no(question):
-    # loop for testing
+
     while True:
         want_instructions = input(question).lower()
 
